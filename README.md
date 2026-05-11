@@ -14,9 +14,11 @@ A minimal Next.js 16 app with [Wacht](https://wacht.dev) authentication wired in
 
 ```bash
 pnpm install
-cp .env.local.example .env.local   # fill in your Wacht keys
+wacht env pull                     # writes .env.local with a fresh deployment key
 pnpm dev
 ```
+
+Without the Wacht CLI: `cp .env.local.example .env.local` and paste the publishable + API keys from https://console.wacht.dev.
 
 Open http://localhost:3000 and click **Sign in** to run through the hosted flow.
 
