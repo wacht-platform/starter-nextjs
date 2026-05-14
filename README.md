@@ -4,7 +4,7 @@ A minimal Next.js 16 app with [Wacht](https://wacht.dev) authentication wired in
 
 ## What's included
 
-- `middleware.ts` — `wachtMiddleware` with `/account(.*)` protected
+- `proxy.ts` — `wachtMiddleware` with `/account(.*)` protected
 - `app/layout.tsx` — `DeploymentProvider` + `DeploymentInitialized`
 - `app/page.tsx` — `SignedIn` / `SignedOut` controls, hosted sign-in
 - `app/account/page.tsx` — server component reading auth via `auth(await headers())`
@@ -18,7 +18,7 @@ wacht env pull                     # writes .env.local with a fresh deployment k
 pnpm dev
 ```
 
-Without the Wacht CLI: `cp .env.local.example .env.local` and paste the publishable + API keys from https://console.wacht.dev.
+Without the Wacht CLI: `cp .env.local.example .env.local` and paste the publishable key, API key, and backend API URL from your deployment.
 
 Open http://localhost:3000 and click **Sign in** to run through the hosted flow.
 
